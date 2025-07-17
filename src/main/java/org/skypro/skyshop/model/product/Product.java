@@ -3,7 +3,6 @@ package org.skypro.skyshop.model.product;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.skypro.skyshop.model.search.Searchable;
 
-import java.util.Objects;
 import java.util.UUID;
 
 public abstract class Product implements Searchable {
