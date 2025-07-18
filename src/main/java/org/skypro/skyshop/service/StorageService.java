@@ -75,6 +75,9 @@ public class StorageService {
         addProduct(potato);
         addProduct(meat);
 
+
+
+
         addArticle(article1);
         addArticle(article2);
         addArticle(article3);
