@@ -26,4 +26,5 @@ public final class SearchResult {
     public String getContentType() {
         return contentType;
     }
+
 }
