@@ -31,7 +31,7 @@ class SearchServiceTest {
     private StorageService storageService;
 
     @InjectMocks
-    SearchService searchService;
+    private SearchService searchService;
 
     @Test
     public void testSearch_NoObjectsInStorage() {

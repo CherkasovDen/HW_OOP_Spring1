@@ -96,10 +96,33 @@ public class BasketServiceTest {
         assertNotNull(userBasket);
         List<BasketItem> items = userBasket.getItems();
         assertEquals(2, items.size());
+
+               // Проверка содержимого items
+        boolean foundProduct1 = false;
+        boolean foundProduct2 = false;
+
+        for (BasketItem item : items) {
+            Product product = item.getProduct();
+            int quantity = item.getQuantity();
+
+            if (product == product1) {
+                foundProduct1 = true;
+                assertEquals(2, quantity);
+            } else if (product == product2) {
+                foundProduct2 = true;
+                assertEquals(3, quantity);
+            }
+        }
+
+        assertTrue(foundProduct1, "В корзине товар1 отсутствует ");
+        assertTrue(foundProduct2, "В корзине товар2 отсутствует ");
+
+
         verify(basket).getProductsBasket();
         verify(storageService).getProductById(productId1);
         verify(storageService).getProductById(productId2);
     }
+
 
 }
 
